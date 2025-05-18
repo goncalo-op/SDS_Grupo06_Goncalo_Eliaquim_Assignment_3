@@ -23,7 +23,7 @@ Podem retirar-se algumas linhas do código fonte, principalmente da natureza des
 import os
 import sys
 
-# Adiciona o diretório raiz do projeto ao sys.path
+##Adiciona o diretório raiz do projeto ao sys.path
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(project_root)
 <<
