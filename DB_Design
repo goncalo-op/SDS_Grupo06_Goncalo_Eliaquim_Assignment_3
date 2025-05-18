@@ -1,0 +1,26 @@
+Modelo Relacional da Base de Dados:
+
+Tabelas:
+User
+id (PK, int)
+username (string, único)
+password (string hash)
+is_admin (boolean)
+
+Package
+id (PK, int)
+user_id (FK → User.id)
+description (string)
+
+Tracking
+id (PK, int)
+package_id (FK → Package.id)
+status (string)
+location (string)
+timestamp (datetime, default atual)
+
+Relações:
+Um User pode ter vários Packages (1:N).
+Um Package pode ter vários Trackings (1:N).
+O Tracking indica a localização e estado de um Package ao longo do tempo.
+
