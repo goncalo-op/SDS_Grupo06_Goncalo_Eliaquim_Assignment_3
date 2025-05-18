@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meus Pacotes</title>
+</head>
+<body>
+    <h1>Meus Pacotes</h1>
+    <p>Bem-vindo, {{ current_user.username }}! <a href="{{ url_for('logout') }}">Sair</a></p>
+    {% if packages %}
+        <ul>
+        {% for package in packages %}
+            <li>{{ package.description }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Você não tem pacotes cadastrados.</p>
+    {% endif %}
+</body>
+</html>
